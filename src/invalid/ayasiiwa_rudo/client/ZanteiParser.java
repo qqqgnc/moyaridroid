@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class ZanteiParser extends BBSParser {
-    private static final String ZANTEI_HOST = "http://533.pr.arena.ne.jp";
+    private static final String ZANTEI_HOST = "http://zangzang.poox360.net";
 
     public ZanteiParser() {
         super();
@@ -33,8 +33,7 @@ public class ZanteiParser extends BBSParser {
         return ret;
     }
 
-    // <font size="+1" color="#fffffe"><b
-    // class="ZANGZANGKijiTitle">＞hoge</b></font> -> hoge
+    // <font size="+1" color="#fffffe"><b class="ZANGZANGKijiTitle">＞hoge</b></font> -> hoge
     @Override
     protected String extractTitle(String s) {
         return extractAuthorInner(s, "ZANGZANGKijiTitle\">");
@@ -70,6 +69,6 @@ public class ZanteiParser extends BBSParser {
 
     private String replaceBBSLink(String s) {
         return s.replaceAll("<a href=\"/cgi-bin/bbs\\.cgi\\?",
-                "<a href=\"http://533.pr.arena.ne.jp/cgi-bin/bbs.cgi?");
+                "<a href=\"http://zangzang.poox360.net/cgi-bin/bbs.cgi?");
     }
 }

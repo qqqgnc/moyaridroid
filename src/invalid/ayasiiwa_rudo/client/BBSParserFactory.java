@@ -2,7 +2,7 @@ package invalid.ayasiiwa_rudo.client;
 
 public class BBSParserFactory {
     public static BBSParser createParser(String url) {
-        if (url.contains("http://533.pr.arena.ne.jp/cgi-bin/bbs.cgi"))
+        if (url.contains("http://zangzang.poox360.net/cgi-bin/bbs.cgi"))
             return new ZanteiParser();
         else if (url.contains("http://210.150.243.7/cgi-bin/bbs.cgi"))
             return new IIParser();
