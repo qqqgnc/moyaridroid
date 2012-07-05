@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:background="#FFFFFF">
+
+<ScrollView android:id="@+id/ScrollView01" android:layout_height="fill_parent" android:layout_width="fill_parent" android:background="#004444"><LinearLayout android:id="@+id/MainLayout" android:orientation="vertical" android:layout_height="fill_parent" android:layout_width="fill_parent"><TextView android:layout_height="wrap_content" android:textSize="24sp" android:layout_gravity="top|center_horizontal" android:gravity="center_horizontal" android:text="@string/bbs_name" android:layout_marginBottom="10sp" android:textColor="#ffffff" android:layout_width="wrap_content" android:id="@+id/TextAppTitle"/></LinearLayout></ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

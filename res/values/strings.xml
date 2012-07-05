@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="post">投稿</string>
+    <string name="reload">リロード</string>
+    
+    <string name="app_name">moyaridroid</string>
+<string name="bbs_name">あやしいわーるど@Android</string>
+
+
+
+
+
+
+<string name="auther_head">投稿者：</string>
+<string name="unreload">未読ﾘﾛｰﾄﾞ</string>
+<string name="next_page">次のページ</string>
+
+
+
+
+<string name="end_post">ー｀)</string>
+</resources>

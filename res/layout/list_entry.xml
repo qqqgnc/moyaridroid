@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:longClickable="true">
+
+
+
+<LinearLayout android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="fill_horizontal" android:layout_width="fill_parent" android:layout_marginBottom="2dp" android:longClickable="true" android:id="@+id/HeaderLayout"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#fffffe" android:id="@+id/TextTitle" android:layout_marginTop="4dp" android:layout_marginLeft="2sp" android:layout_marginBottom="2sp"></TextView><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#fffffe" android:id="@+id/TextAutherHead" android:text="@string/auther_head" android:layout_marginLeft="2sp" android:layout_marginTop="4dp" android:layout_marginBottom="2sp"></TextView><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/TextAuthor" android:textColor="#fffffe" android:layout_marginBottom="2sp" android:layout_marginLeft="2sp" android:layout_marginTop="4sp"></TextView>
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/TextTime" android:textColor="#fffffe" android:scrollHorizontally="true" android:ellipsize="end" android:layout_marginBottom="2sp" android:layout_marginLeft="2sp" android:layout_marginTop="4dp"></TextView>
+
+</LinearLayout><TextView android:layout_height="wrap_content" android:id="@+id/TextQuote" android:textColor="#ffffff" android:layout_width="fill_parent" android:layout_marginLeft="2dp" android:layout_marginRight="2dp" android:layout_marginTop="2dp" android:longClickable="true"></TextView><TextView android:layout_height="wrap_content" android:layout_width="fill_parent" android:textColor="#ffffff" android:id="@+id/TextBody" android:layout_marginLeft="2dp" android:layout_marginRight="2dp" android:longClickable="true" android:layout_marginBottom="10dp"></TextView>
+
+
+</LinearLayout>

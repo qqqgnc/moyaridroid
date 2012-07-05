@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical" android:background="#004040" android:layout_width="fill_parent" android:layout_height="fill_parent" android:id="@+id/BaseLayout">
+<LinearLayout android:id="@+id/LinearLayout01" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_gravity="right" android:layout_width="fill_parent"><Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="消す" android:id="@+id/EraseButton" android:layout_gravity="left|center_vertical" android:layout_marginLeft="2dp"></Button><TextView android:id="@+id/TextView06" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:layout_weight="1"></TextView><Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/PostButton" android:text="投稿" android:layout_gravity="right|center_vertical" android:layout_marginRight="2dp"></Button>
+</LinearLayout><ScrollView android:id="@+id/ScrollView01" android:layout_width="fill_parent" android:layout_height="fill_parent"><TableLayout android:id="@+id/TableLayout01" android:layout_height="fill_parent" android:layout_width="fill_parent" android:stretchColumns="1" android:shrinkColumns="1"><TableRow android:id="@+id/TableRow02" android:layout_height="wrap_content" android:layout_width="fill_parent"><TextView android:id="@+id/TextView04" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="内容" android:textColor="#ffffff" android:layout_margin="2sp"></TextView><EditText android:inputType="textMultiLine" android:layout_height="wrap_content" android:minLines="4" android:gravity="top|left" android:id="@+id/BodyEdit" android:scrollHorizontally="false" android:layout_width="wrap_content" android:maxLines="10"></EditText>
+</TableRow><TableRow android:id="@+id/TableRow03" android:layout_height="wrap_content" android:layout_width="fill_parent"><TextView android:id="@+id/TextView03" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="題名" android:textColor="#ffffff" android:layout_margin="2sp" android:inputType="text"></TextView><EditText android:layout_height="wrap_content" android:layout_width="fill_parent" android:maxLength="40" android:id="@+id/TitleEdit"></EditText>
+</TableRow><TableRow android:id="@+id/TableRow04" android:layout_height="wrap_content" android:layout_width="fill_parent"><TextView android:id="@+id/TextView01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="投稿者" android:textColor="#ffffff" android:layout_margin="2sp"></TextView><EditText android:layout_height="wrap_content" android:layout_width="fill_parent" android:inputType="text" android:maxLength="30" android:id="@+id/NameEdit"></EditText>
+</TableRow><TableRow android:id="@+id/TableRow05" android:layout_height="wrap_content" android:layout_width="fill_parent"><TextView android:id="@+id/TextView02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="メール" android:textColor="#ffffff" android:layout_margin="2sp"></TextView><EditText android:layout_height="wrap_content" android:layout_width="fill_parent" android:inputType="text" android:maxLength="255" android:id="@+id/MailEdit"></EditText></TableRow><TableRow android:id="@+id/TableRow06" android:layout_height="wrap_content" android:layout_width="fill_parent"><TextView android:id="@+id/TextView05" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="URL" android:layout_margin="2sp" android:textColor="#ffffff"></TextView><EditText android:layout_height="wrap_content" android:layout_width="fill_parent" android:inputType="text" android:maxLength="255" android:id="@+id/LinkEdit"></EditText></TableRow></TableLayout></ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+あやしいわーるど＠本店,http://strangeworld-honten.com/cgi-bin/bbs.cgi,honten,noid
+あやしいわーるど＠上海,http://qwerty.on.arena.ne.jp/cgi-bin/bbs.cgi,qwerty,useid
+あやしいわーるど＠暫定(暫定退避),http://533.pr.arena.ne.jp/cgi-bin/bbs.cgi,zantei,useid
+あやしいわーるど＠のぞみ,http://amari.ath.cx/bbs/bbs.cgi,nozomi,noid
+あやしいわーるどII,http://210.150.243.7/cgi-bin/bbs.cgi,ii,noid
+あやしいわーるど＠支店,http://hontena.s231.xrea.com/index.cgi,shiten,useid
+あやしいわーるど鐵道（快速リゾートてらし）,http://yotsuba.saiin.net/~testcard/swr/bbs.cgi,tetsudo,useid
+あやしくないわーるど＠ふぁっしょん,http://at-fashion.jp/cgi-bin/bbs.cgi,fashion,useid
+元あやしいわーるど＠クリスマス島,http://www.strangeworld.ne.jp/cgi-bin/bbs/bbs.cgi,cx,noid

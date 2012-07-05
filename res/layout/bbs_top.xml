@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical" android:layout_height="fill_parent" android:layout_width="fill_parent" android:id="@+id/BaseLayout" android:background="#004040">
+<LinearLayout android:id="@+id/LinearLayout01" android:layout_height="wrap_content" android:layout_width="fill_parent"><Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/reload" android:id="@+id/ReloadButton" android:layout_marginRight="2dp" android:textSize="12sp"></Button><Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/unreload" android:id="@+id/ReloadUnreadButton" android:layout_marginRight="2dp" android:textSize="12sp"></Button><Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/NextPage" android:text="@string/next_page" android:layout_marginRight="2dp" android:textSize="12sp"></Button><TextView android:id="@+id/TextView01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" android:visibility="invisible"></TextView><Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="投稿" android:id="@+id/PostButton" android:textSize="12sp"></Button>
+</LinearLayout>
+<ListView android:layout_gravity="left|fill_horizontal" android:smoothScrollbar="false" android:footerDividersEnabled="true" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/PostList" android:scrollingCache="false"></ListView>
+
+</LinearLayout>
