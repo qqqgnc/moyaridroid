@@ -7,6 +7,7 @@ import invalid.ayasiiwa_rudo.client.HttpSource;
 import invalid.ayasiiwa_rudo.client.MemoryLogMerchant;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -28,6 +29,7 @@ public class ThreadListActivity extends PostListActivity {
     private String threadUrl;
     private String protectCode;
     private String bgColor;
+    private boolean sort_desc = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +70,12 @@ public class ThreadListActivity extends PostListActivity {
                     return;
                 }
             }
-            loadWithProgress(0, 0);
+            if (sort_desc) {
+            	loadWithProgress(-1, 0);
+            } else {
+            	loadWithProgress(0, 0);
+            }
+            
         } else {
             restoreList();
         }
@@ -136,7 +143,19 @@ public class ThreadListActivity extends PostListActivity {
 
     @Override
     protected void postAsyncLoad(boolean canceled) {
-        if (!canceled)
-            Collections.reverse(getBBS().getPosts());
+        if (!canceled) {
+        	if (sort_desc) {
+        		getBBS().getPosts();
+        	} else {
+        		Collections.reverse(getBBS().getPosts());
+        	}
+        }
     }
+
+    @Override
+    protected void loadViewPref(SharedPreferences pref) {
+        super.loadViewPref(pref);
+        sort_desc = pref.getBoolean(ViewPrefActivity.KEY_DESC_THREAD, true);
+    }
+
 }

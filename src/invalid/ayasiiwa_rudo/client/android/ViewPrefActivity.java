@@ -26,6 +26,7 @@ public class ViewPrefActivity extends PreferenceActivity {
     public static final String KEY_BBS_BANNER = "bbsbanner";
     public static final String KEY_FLING_LOAD = "flingload";
     public static final String KEY_MENUBUTTON_ON_TOP = "menubuttonontop";
+    public static final String KEY_DESC_THREAD= "descthread";
 
     private String fonts[];
 
@@ -95,6 +96,13 @@ public class ViewPrefActivity extends PreferenceActivity {
         check.setKey(KEY_FLING_LOAD);
         screen.addPreference(check);
 
+        check = new CheckBoxPreference(this);
+        check.setTitle("Desc sort thread");
+        check.setSummary("newer post is top");
+        check.setChecked(true);
+        check.setKey(KEY_DESC_THREAD);
+        screen.addPreference(check);
+        
         check = new CheckBoxPreference(this);
         check.setTitle("Top Menu");
         check.setSummary("Menu button on top");

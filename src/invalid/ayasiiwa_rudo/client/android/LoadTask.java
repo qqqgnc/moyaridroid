@@ -63,7 +63,7 @@ public class LoadTask extends AsyncTask<PostAdapter, Post, PostAdapter> {
     protected void onPreExecute() {
         activity.preAsyncLoad();
         TextView t = (TextView) activity.findViewById(R.id.TextParticipants);
-        changeTitleText(activity, "ÅR(ÅLÅ[` )Ém");
+        changeTitleText(activity, "„ÉΩ(¬¥„Éº` )„Éé");
         t.setText("");
         t.setTextColor(Color.YELLOW);
      }
