@@ -5,6 +5,7 @@
 *.class
 bin/
 gen/
+proguard/
 local.properties
 .classpath
 .project
