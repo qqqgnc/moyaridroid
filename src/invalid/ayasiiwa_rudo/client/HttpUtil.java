@@ -12,7 +12,7 @@ import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
 
 public class HttpUtil {
-    static final public String USER_AGENT = "moyaridroid 0.2.7";
+    static final public String USER_AGENT = "moyaridroid 0.2.7 mod";
     // Set the timeout in milliseconds until a connection is established.
     static final public int timeoutConnection = 60000;
     // Set the default socket timeout (SO_TIMEOUT)
