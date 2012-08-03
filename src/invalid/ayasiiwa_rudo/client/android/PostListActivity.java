@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Random;
+import java.util.concurrent.Semaphore;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
@@ -101,6 +102,7 @@ public abstract class PostListActivity extends Activity {
     private boolean backScrollEnabled = true;
     private LoadTask loadTask = null;
     private WaitAnime waitAnime;
+    private Semaphore loadLock = new Semaphore(1);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -308,6 +310,10 @@ public abstract class PostListActivity extends Activity {
     }
 
     protected void loadWithProgress(int insertPosition, int insertDelta) {
+    	if (!loadLock.tryAcquire()) {
+            Toast.makeText(this, "other thread now loading.", Toast.LENGTH_SHORT).show();
+            return;
+    	}
         if (loadTask != null) {
             loadTask.cancel(true);
         }
@@ -621,6 +627,7 @@ public abstract class PostListActivity extends Activity {
 
     protected void finishLoadTask() {
         loadTask = null;
+        loadLock.release();
     }
 
     protected PostAdapter getPostAdapter() {
