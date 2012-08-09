@@ -1,6 +1,8 @@
 package invalid.ayasiiwa_rudo.client.android;
 
 import java.util.List;
+import java.util.concurrent.Semaphore;
+
 import invalid.ayasiiwa_rudo.client.BBS;
 import invalid.ayasiiwa_rudo.client.BBSInfo;
 import invalid.ayasiiwa_rudo.client.BBSManager;
@@ -44,6 +46,7 @@ public class PostActivity extends Activity implements Runnable {
     private Handler handler = new Handler();
     private int mode = 0;
     private PostParams postParams;
+    private Semaphore postLock = new Semaphore(1);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -173,9 +176,11 @@ public class PostActivity extends Activity implements Runnable {
             showBBSDialog();
             return;
         }
-        progressDialog = ProgressDialog.show(this, "", "Loading...", true);
-        Thread th = new Thread(this);
-        th.start();
+        if (postLock.tryAcquire()) {
+        	progressDialog = ProgressDialog.show(this, "", "Loading...", true);
+        	Thread th = new Thread(this);
+        	th.start();
+        }
     }
 
     private void clear() {
@@ -261,6 +266,8 @@ public class PostActivity extends Activity implements Runnable {
                     }
                 }
             }));
+        } finally {
+        	postLock.release();
         }
     }
 
