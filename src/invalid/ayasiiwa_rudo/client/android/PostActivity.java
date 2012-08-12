@@ -14,6 +14,8 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -169,7 +171,16 @@ public class PostActivity extends Activity implements Runnable {
         a[10] = followLink;
         outState.putStringArray("items", a);
     }
-
+    
+    public void disableRotation(){
+        Configuration config = getResources().getConfiguration();
+        if(config.orientation == Configuration.ORIENTATION_PORTRAIT){
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }else if (config.orientation == Configuration.ORIENTATION_LANDSCAPE){
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        }
+    }
+    
     private void post() {
         if (url == null || url.length() == 0) {
             Toast.makeText(this, "投稿先が未指定です。", Toast.LENGTH_LONG).show();
@@ -177,6 +188,7 @@ public class PostActivity extends Activity implements Runnable {
             return;
         }
         if (postLock.tryAcquire()) {
+        	disableRotation();
         	progressDialog = ProgressDialog.show(this, "", "Loading...", true);
         	Thread th = new Thread(this);
         	th.start();
