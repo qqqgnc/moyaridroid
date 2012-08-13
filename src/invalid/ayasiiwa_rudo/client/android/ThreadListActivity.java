@@ -112,7 +112,11 @@ public class ThreadListActivity extends PostListActivity {
             adp.clear();
             adp.notifyDataSetChanged();
             getBBS().clearLog();
-            loadWithProgress(0, 0);
+            if (sort_desc) {
+            	loadWithProgress(-1, 0);
+            } else {
+            	loadWithProgress(0, 0);
+            }
             return true;
         }
         return super.onOptionsItemSelected(item);
